@@ -1,0 +1,30 @@
+﻿  main.cpp
+C:\Users\chris\source\repos\dummy\dummy\shader.h(56,40): warning C4101: 'e': unreferenced local variable
+C:\Users\chris\source\repos\dummy\dummy\mesh.h(84,1): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\hsvrgb.h(60,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\hsvrgb.h(107,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\hsvrgb.h(108,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(217,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(252,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(253,66): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(260,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(261,66): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(268,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(269,66): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(276,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(277,66): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(285,57): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(286,61): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(488,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(489,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(493,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(494,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(496,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(497,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(506,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(552,18): warning C4305: '*=': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(553,18): warning C4305: '*=': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(558,31): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(559,19): warning C4305: '*=': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(560,19): warning C4305: '*=': truncation from 'double' to 'float'
+  dummy.vcxproj -> C:\Users\chris\source\repos\dummy\x64\Debug\glfwTest.exe
