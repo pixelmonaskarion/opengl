@@ -460,7 +460,10 @@ void processInput(GLFWwindow* window)
          camera.ProcessKeyboard(DOWN, deltaTime);*/
 
     if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
-        lightPos = camera.Position;
+        if (shootCooldown == 0) {
+            shoot();
+            shootCooldown = 10;
+        }
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
@@ -576,8 +579,8 @@ void gameLoop() {
             h = 0;
         }
         HSVtoRGB(r, g, b, h, s, v);
-        //cout << "R " << r * 100 << " G " << g * 100 << " B " << b * 100 << endl;
         bullets[i].color = glm::vec3(r * 100, g * 100, b * 100);
+        cout << "R " << bullets[i].color.x << " G " << bullets[i].color.y << " B " << bullets[i].color.z << endl;
     }
     //stick camera.Position+camera.Right*glm::vec3(0.7);
 }
