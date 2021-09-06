@@ -39,6 +39,10 @@ public:
     vector<Texture>      textures;
     unsigned int VAO;
 
+    Mesh() {
+
+    }
+
     // constructor
     Mesh(vector<Vertex> vertices, vector<unsigned int> indices, vector<Texture> textures)
     {
@@ -51,7 +55,7 @@ public:
     }
 
     // render the mesh
-    void Draw(Shader& shader)
+    void Draw(Shader& shader, glm::vec3 position, glm::vec3 rotation, glm::vec3 scale)
     {
         // bind appropriate textures
         unsigned int diffuseNr = 1;
@@ -80,6 +84,14 @@ public:
         }
 
         // draw mesh
+        glm::mat4 model = glm::mat4(1.0f);
+        model = glm::translate(model, position);
+        model = glm::rotate(model, glm::radians(rotation.x), glm::vec3(1, 0, 0));
+        model = glm::rotate(model, glm::radians(rotation.y), glm::vec3(0, 1, 0));
+        model = glm::rotate(model, glm::radians(rotation.z), glm::vec3(0, 0, 1));
+        model = glm::scale(model, scale);
+        shader.setMat4("model", model);
+
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);

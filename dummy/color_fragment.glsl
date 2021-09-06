@@ -42,7 +42,7 @@ struct SpotLight {
     vec3 specular;       
 };
 
-#define NR_POINT_LIGHTS 50
+#define NR_POINT_LIGHTS 10
 
 in vec3 FragPos;
 in vec3 Normal;
@@ -79,6 +79,11 @@ void main()
     // phase 3: spot light
     result += CalcSpotLight(spotLight, norm, FragPos, viewDir);    
     
+    //cell shading
+    //result.x = 1/(1+exp(-10*result.x))-0.5;
+    //result.y = 1/(1+exp(-10*result.y))-0.5;
+    //result.z = 1/(1+exp(-10*result.z))-0.5;
+
     FragColor = vec4(result, 1.0);
 }
 

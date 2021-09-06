@@ -42,10 +42,10 @@ public:
     }
 
     // draws the model, and thus all its meshes
-    void Draw(Shader& shader)
+    void Draw(Shader& shader, glm::vec3 position, glm::vec3 rotation, glm::vec3 scale)
     {
         for (unsigned int i = 0; i < meshes.size(); i++)
-            meshes[i].Draw(shader);
+            meshes[i].Draw(shader, position, rotation, scale);
     }
 
 private:
@@ -177,7 +177,7 @@ private:
     {
         vector<Texture> textures;
         for (unsigned int i = 0; i < mat->GetTextureCount(type); i++)
-        {
+        {   
             aiString str;
             mat->GetTexture(type, i, &str);
             // check if texture was loaded before and if so, continue to next iteration: skip loading a new texture
@@ -210,9 +210,11 @@ unsigned int TextureFromFile(const char* path, const string& directory, bool gam
 {
     string filename = string(path);
     filename = directory + '/' + filename;
+    cout << directory << " " << filename << endl;
 
-    unsigned int textureID;
+    unsigned int textureID = 0;
     glGenTextures(1, &textureID);
+    cout << "textureId " << textureID << endl;
 
     int width, height, nrComponents;
     unsigned char* data = stbi_load(filename.c_str(), &width, &height, &nrComponents, 0);
@@ -225,7 +227,7 @@ unsigned int TextureFromFile(const char* path, const string& directory, bool gam
             format = GL_RGB;
         else if (nrComponents == 4)
             format = GL_RGBA;
-
+        cout << "format: " << format << endl;
         glBindTexture(GL_TEXTURE_2D, textureID);
         glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
         glGenerateMipmap(GL_TEXTURE_2D);

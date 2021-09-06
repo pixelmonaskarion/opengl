@@ -11,6 +11,7 @@
 #include "camera.h"
 #include "model.h"
 #include "hsvrgb.h"
+#include "sprite.h"
 
 #include <iostream>
 #include <string>
@@ -38,8 +39,6 @@ bool firstMouse = true;
 float sx, sy, sz, walkFrame;
 int inAir;
 
-//objects
-//Model stick("backpack/backpack.obj");
 struct Bullet
 {
     glm::vec3 position;
@@ -53,6 +52,7 @@ float deltaTime = 0.0f;	// time between current frame and last frame
 float lastFrame = 0.0f;
 
 glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
+
 
 // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -162,11 +162,22 @@ int main()
     // configure global opengl state
     // -----------------------------
     glEnable(GL_DEPTH_TEST);
+    glEnable(GL_TEXTURE_2D);
 
-    // build and compile our shader zprogram
+    // build and compile our shader program
     // ------------------------------------
     Shader lightingShader("color_vertex.glsl", "color_fragment.glsl");
     Shader lightCubeShader("light_vertex.glsl", "light_fragment.glsl");
+
+    Model stick("stick.obj");
+    cout << "created stick object" << endl;
+    //WIP
+    /*Texture spriteTexture;
+    spriteTexture.id = loadTexture("oak_planks.png");
+    spriteTexture.path = "oak_planks.png";
+    spriteTexture.type = 1;
+
+    Sprite sprite(spriteTexture, 1, 1, camera.Position);*/
 
     // first, configure the cube's VAO (and VBO)
     unsigned int VBO, cubeVAO;
@@ -193,6 +204,7 @@ int main()
     // note that we update the lamp's position attribute's stride to reflect the updated buffer data
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
+    cout << "created cube model" << endl;
 
     // load textures (we now use a utility function to keep the code more organized)
     // -----------------------------------------------------------------------------
@@ -209,7 +221,7 @@ int main()
     // ----------=
 
     setup();
-
+    cout << "render loop" << endl;
     while (!glfwWindowShouldClose(window))
     {
         // per-frame time logic
@@ -244,7 +256,7 @@ int main()
         lightingShader.setVec3("dirLight.diffuse", 0.4f, 0.4f, 0.4f);
         lightingShader.setVec3("dirLight.specular", 0.5f, 0.5f, 0.5f);
         // point light 1
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 10; i++) {
             if (i >= bullets.size()) {
                 lightingShader.setVec3("pointLights[" + to_string(i) + "].position", glm::vec3(1000,1000,1000));
                 lightingShader.setVec3("pointLights[" + to_string(i) + "].ambient", 0.05f, 0.05f, 0.05f);
@@ -293,24 +305,26 @@ int main()
         glBindTexture(GL_TEXTURE_2D, specularMap);
 
         // render the cube
-        glBindVertexArray(cubeVAO);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
+        /*glBindVertexArray(cubeVAO);
+        glDrawArrays(GL_TRIANGLES, 0, 36);*/
 
         //render containers
-        glBindVertexArray(cubeVAO);
-        for (unsigned int i = 0; i < 10; i++)
-        {
-            //    // calculate the model matrix for each object and pass it to shader before drawing
-            glm::mat4 model = glm::mat4(1.0f);
-            model = glm::translate(model, cubePositions[i]);
-            float angle = 20.0f * i;
-            model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
-            lightingShader.setMat4("model", model);
+        //glBindVertexArray(cubeVAO);
+        //for (unsigned int i = 0; i < 10; i++)
+        //{
+        //    //    // calculate the model matrix for each object and pass it to shader before drawing
+        //    glm::mat4 model = glm::mat4(1.0f);
+        //    model = glm::translate(model, cubePositions[i]);
+        //    float angle = 20.0f * i;
+        //    model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
+        //    lightingShader.setMat4("model", model);
 
-            glDrawArrays(GL_TRIANGLES, 0, 36);
-        }
-        //stick.Draw(lightingShader);
-        draw();
+        //    glDrawArrays(GL_TRIANGLES, 0, 36);
+        //}
+        
+        //render objects
+
+        stick.Draw(lightingShader, glm::vec3(0, 0, 0), glm::vec3(0,0,0), glm::vec3(0.1,0.1,0.1));
 
 
         // a lamp object is weird when we only have a directional light, don't render the light object
@@ -507,6 +521,7 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 
 unsigned int loadTexture(char const* path)
 {
+    cout << "loading model " << path << endl;
     unsigned int textureID;
     glGenTextures(1, &textureID);
 
@@ -586,12 +601,9 @@ void gameLoop() {
 }
 
 unsigned int planeVBO, planeVAO;
-void draw() {
-    // draw mesh
-    /*glBindVertexArray(planeVAO);
-    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-    glBindVertexArray(0);*/
-}
+int planeIndices[] = {
+    0,1,2,3,4,5
+};
 
 void setup() {
 
@@ -603,6 +615,7 @@ void setup() {
      10, 0, 10,
      10, 0,-10};
     glGenVertexArrays(1, &planeVAO);
+    cout << "planeVAO: " << planeVAO << endl;
     glGenBuffers(1, &planeVBO);
     glBindBuffer(GL_ARRAY_BUFFER, planeVBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(planeVertices), planeVertices, GL_STATIC_DRAW);

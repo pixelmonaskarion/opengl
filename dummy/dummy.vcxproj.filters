@@ -47,6 +47,9 @@
     <ClInclude Include="hsvrgb.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="sprite.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="color_vertex.glsl">
@@ -59,6 +62,12 @@
       <Filter>Source Files</Filter>
     </None>
     <None Include="light_fragment.glsl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="spriteVertex.glsl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="spriteFragment.glsl">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

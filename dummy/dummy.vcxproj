@@ -154,6 +154,7 @@
     <ClInclude Include="include.h" />
     <ClInclude Include="model.h" />
     <ClInclude Include="shader.h" />
+    <ClInclude Include="sprite.h" />
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +162,8 @@
     <None Include="color_vertex.glsl" />
     <None Include="light_fragment.glsl" />
     <None Include="light_vertex.glsl" />
+    <None Include="spriteFragment.glsl" />
+    <None Include="spriteVertex.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\..\Downloads\container.jpg" />

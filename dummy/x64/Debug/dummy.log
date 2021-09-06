@@ -1,29 +1,29 @@
 ﻿  main.cpp
-C:\Users\chris\source\repos\dummy\dummy\shader.h(56,40): warning C4101: 'e': unreferenced local variable
-C:\Users\chris\source\repos\dummy\dummy\mesh.h(84,1): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\shader.h(58,40): warning C4101: 'e': unreferenced local variable
+C:\Users\chris\source\repos\dummy\dummy\mesh.h(96,1): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
 C:\Users\chris\source\repos\dummy\dummy\hsvrgb.h(60,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 C:\Users\chris\source\repos\dummy\dummy\hsvrgb.h(107,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 C:\Users\chris\source\repos\dummy\dummy\hsvrgb.h(108,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(217,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(254,89): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(255,93): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(263,89): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(264,93): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(273,57): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(274,61): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(487,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(488,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(492,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(493,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(495,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(496,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(505,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(551,18): warning C4305: '*=': truncation from 'double' to 'float'
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(552,18): warning C4305: '*=': truncation from 'double' to 'float'
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(557,31): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(558,19): warning C4305: '*=': truncation from 'double' to 'float'
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(559,19): warning C4305: '*=': truncation from 'double' to 'float'
-C:\Users\chris\source\repos\dummy\dummy\main.cpp(567,5): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(229,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(266,89): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(267,93): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(275,89): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(276,93): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(285,57): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(286,61): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(501,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(502,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(506,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(507,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(509,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(510,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(519,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(566,18): warning C4305: '*=': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(567,18): warning C4305: '*=': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(572,31): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(573,19): warning C4305: '*=': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(574,19): warning C4305: '*=': truncation from 'double' to 'float'
+C:\Users\chris\source\repos\dummy\dummy\main.cpp(582,5): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 x64\Debug\mesh.obj : warning LNK4042: object specified more than once; extras ignored
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   dummy.vcxproj -> C:\Users\chris\source\repos\dummy\x64\Debug\glfwTest.exe
